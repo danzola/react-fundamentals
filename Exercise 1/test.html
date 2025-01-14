@@ -1,0 +1,27 @@
+<body>  
+  <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  <script type="text/babel">
+    function App() {
+      return (
+        <div className="container">
+          <Message>Hello World</Message>
+          <Message>Goodbye World</Message>
+        </div>
+      )
+    }
+
+    function Message({ children }) {
+      const className = 'message'
+      const props = { children, className }
+      return <div {...props} />
+    }
+
+    const rootElement = document.createElement('div')
+    rootElement.setAttribute('id', 'root')
+    document.body.append(rootElement)
+    
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+  </script>
+</body>
