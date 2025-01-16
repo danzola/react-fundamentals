@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react'
+import './box-styles.css'
+
+function Box({style, size, ...otherProps}) {
+  const sizeClassName = size ? `box--${size}` : ''
+  return (
+    <div
+      className={`box ${sizeClassName}`}
+      style={{fontStyle: 'italic', ...style}}
+      {...otherProps}
+    />
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box size="small" style={{backgroundColor: 'lightblue'}}>
+        small lightblue box
+      </Box>
+      <Box size="medium" style={{backgroundColor: 'pink'}}>
+        medium pink box
+      </Box>
+      <Box size="large" style={{backgroundColor: 'orange'}}>
+        large orange box
+      </Box>
+      <Box>sizeless box</Box>
     </div>
-  );
+  )
 }
 
 export default App;
