@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import App from './App';
-import AppForm from './AppForm';
-import AppFormControlInput from './AppFormControlInput.js';
 import reportWebVitals from './reportWebVitals';
-import AppArray from './AppArray.js';
+
+import AppGreeting from './AppGreeting';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppArray />
-    <AppFormControlInput />    
-    <AppForm />
-    <App />
+    <AppGreeting />    
   </React.StrictMode>
 );
 
