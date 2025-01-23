@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-import AppLifting from './AppLifting';
+import AppTicTacToe from './AppTicTacToe';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppLifting />    
+    <AppTicTacToe />    
   </React.StrictMode>
 );
 
