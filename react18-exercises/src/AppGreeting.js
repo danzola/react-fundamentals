@@ -5,6 +5,7 @@ function useLocalStorageState(key, defaultValue = '') {
     () => window.localStorage.getItem(key) ?? defaultValue
   )
 
+  //Run when the key or state changes
   React.useEffect(() => {
     window.localStorage.setItem(key, state)
   }, [key, state])
