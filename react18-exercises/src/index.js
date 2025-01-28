@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-import AppTicTacToeHistory from './AppTicTacToeHistory';
+import AppHttp from './AppHttp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppTicTacToeHistory />    
+    <AppHttp />    
   </React.StrictMode>
 );
 
